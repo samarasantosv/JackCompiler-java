@@ -1,51 +1,73 @@
-# Analisador Léxico - Linguagem Jack
+# 🛠️ Analisador Léxico - Linguagem Jack
 
-Implementação de um analisador léxico (scanner) para a linguagem Jack, desenvolvido em Java como parte da disciplina de Compiladores. O programa lê arquivos `.jack`, identifica os tokens e gera uma saída em formato XML conforme o padrão do nand2tetris.
+Implementação de um analisador léxico (scanner) para a linguagem Jack, desenvolvido em Java. O programa lê automaticamente todos os arquivos `.jack` de uma pasta e gera seus respectivos arquivos `.xml`.
 
-Este projeto representa a etapa inicial da construção de um compilador, focando na análise léxica da linguagem Jack.
 ---
 
-## Autora
+## 👩‍💻 Autora
 
 - Samara Santos Viegas  
 - Matrícula: 2022042898  
 
 ---
 
-## Linguagem
+## 💻 Tecnologias
 
 - Java  
+- Implementação manual (sem Lex/Yacc)
 
 ---
 
-##  Funcionalidades
+## 🎯 Funcionalidades
 
-- Leitura de arquivos `.jack`  
-- Remoção de espaços e comentários (`//` e `/* */`)  
+- Leitura automática de múltiplos arquivos `.jack`
+- Remoção de espaços e comentários (`//` e `/* */`)
 - Identificação de tokens:
-  - `keyword`
-  - `symbol`
-  - `identifier`
-  - `integerConstant`
-  - `stringConstant`
-- Geração de saída em XML  
+  - keyword
+  - symbol
+  - identifier
+  - integerConstant
+  - stringConstant
+- Geração automática de arquivos XML
 
 ---
 
-## Exemplo de saída
+## 📁 Estrutura do Projeto
 
-```xml
-<tokens>
-<keyword> class </keyword>
-<identifier> Main </identifier>
-<symbol> { </symbol>
-...
-</tokens>
+```
+jacklexer/
+├── JackTokenizer.java
+├── teste/
+│   ├── Main.jack
+│   ├── Square.jack
+│   ├── SquareGame.jack
+│   ├── MainT.xml
+│   ├── SquareT.xml
+│   └── SquareGameT.xml
+└── README.md
 ```
 
 ---
 
-## Observações
+## ▶️ Como executar
+
+1. Abrir o projeto no Eclipse  
+2. Garantir que os arquivos `.jack` estejam na pasta `teste`  
+3. Executar `JackTokenizer` como Java Application  
+
+---
+
+## 📤 Saída
+
+Para cada arquivo `.jack`, é gerado automaticamente um `.xml` correspondente:
+
+- Main.jack → MainT.xml  
+- Square.jack → SquareT.xml  
+- SquareGame.jack → SquareGameT.xml  
+
+---
+
+## ⚠️ Observações
 
 - Caracteres especiais são tratados:
   - `<` → `&lt;`
@@ -54,9 +76,6 @@ Este projeto representa a etapa inicial da construção de um compilador, focand
 
 ---
 
-## Como executar
+## 🚀 Sobre
 
-### No Eclipse
-1. Abrir o projeto  
-2. Ajustar o caminho do arquivo `.jack`  
-3. Executar `JackTokenizer` como Java Application  
+Este projeto representa a etapa de análise léxica na construção de um compilador para a linguagem Jack.
