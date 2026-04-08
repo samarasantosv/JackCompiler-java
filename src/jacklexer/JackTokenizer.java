@@ -16,7 +16,7 @@ public class JackTokenizer {
 	   
 	    public static void main(String[] args) throws IOException {
 
-	        String folderPath = "C:\\Users\\User\\Documents\\jacklexer\\jacklexer\\src\\jacklexer";
+	        String folderPath = "C:\\Users\\User\\Documents\\jacklexer\\jacklexer\\src\\jacklexer\\teste";
 
 	        File folder = new File(folderPath);
 	        File[] files = folder.listFiles((dir, name) -> name.endsWith(".jack"));
