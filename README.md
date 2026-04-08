@@ -1,6 +1,6 @@
 # Projeto de Compilador
 
-## Integrante(s)
+## Discente:
 - Samara Santos Viegas
 
 ## Linguagem de Programação
