@@ -60,15 +60,3 @@ Este projeto representa a etapa inicial da construção de um compilador, focand
 1. Abrir o projeto  
 2. Ajustar o caminho do arquivo `.jack`  
 3. Executar `JackTokenizer` como Java Application  
-
----
-
-## Estrutura
-
-```
-jacklexer/
-├── JackTokenizer.java
-├── Main.jack
-├── MainT.xml
-└── README.md
-```
