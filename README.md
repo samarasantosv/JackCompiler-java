@@ -12,10 +12,9 @@ Este projeto representa a etapa inicial da construção de um compilador, focand
 
 ---
 
-## Tecnologias
+## Linguagem
 
 - Java  
-- Sem uso de geradores automáticos 
 
 ---
 
