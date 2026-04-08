@@ -15,8 +15,7 @@ public class JackTokenizer {
 	    ));
 
 	    public static void main(String[] args) throws IOException {
-	        String inputFile = "C:\\Users\\User\\Documents\\jacklexer\\jacklexer\\src\\jacklexer\\Main.jack";; // vamos começar fixo
-
+	        String inputFile = "C:\\Users\\User\\Documents\\jacklexer\\jacklexer\\src\\jacklexer\\Main.jack";; 
 	        String content = readFile(inputFile);
 	        content = removeComments(content);
 
