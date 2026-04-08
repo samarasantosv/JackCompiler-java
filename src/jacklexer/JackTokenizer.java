@@ -13,19 +13,34 @@ public class JackTokenizer {
 	    private static final Set<Character> SYMBOLS = new HashSet<>(Arrays.asList(
 	            '{','}','(',')','[',']','.',';',',','+','-','*','/','&','|','<','>','=','~'
 	    ));
-
+	   
 	    public static void main(String[] args) throws IOException {
-	        String inputFile = "C:\\Users\\User\\Documents\\jacklexer\\jacklexer\\src\\jacklexer\\Main.jack";; 
-	        String content = readFile(inputFile);
-	        content = removeComments(content);
 
-	        List<Token> tokens = tokenize(content);
+	        String folderPath = "C:\\Users\\User\\Documents\\jacklexer\\jacklexer\\src\\jacklexer";
 
-	        writeXML(tokens, "MainT.xml");
+	        File folder = new File(folderPath);
+	        File[] files = folder.listFiles((dir, name) -> name.endsWith(".jack"));
 
-	        System.out.println("Arquivo gerado!");
+	        if (files == null) {
+	            System.out.println("Nenhum arquivo encontrado.");
+	            return;
+	        }
+
+	        for (File file : files) {
+	            String inputFile = file.getAbsolutePath();
+
+	            String content = readFile(inputFile);
+	            content = removeComments(content);
+
+	            List<Token> tokens = tokenize(content);
+
+	            String outputFile = inputFile.replace(".jack", "T.xml");
+
+	            writeXML(tokens, outputFile);
+
+	            System.out.println("Gerado: " + outputFile);
+	        }
 	    }
-
 	    static class Token {
 	        String type;
 	        String value;
